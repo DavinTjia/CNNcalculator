@@ -20,14 +20,33 @@ def isReenter(input):
         return 1
 
 def main():
+    progress = 0
     # take user input
-    print("Enter the dimension of the image")
-    print("Enter the width of the image")
-    width = takeInput()
-    print("Enter the height of the image")
-    height = takeInput()
-    print("Enter the number of channels of the image")
-    channels = takeInput()
+    # print("Enter the dimension of the image")
+    # print("Enter the width of the image")
+    # width = takeInput()
+    # print("Enter the height of the image")
+    # height = takeInput()
+    # print("Enter the number of channels of the image")
+    # channels = takeInput()
+
+    # initialize width, height and channels
+    width, height, channels = 0, 0, 0
+
+    while progress < 3:
+        if progress == 0:
+            print("Enter the width of the image")
+            width = takeInput()
+            progress += isReenter(width)
+        elif progress == 1:
+            print("Enter the height of the image")
+            height = takeInput()
+            progress += isReenter(height)
+        elif progress == 2:
+            print("Enter the number of channels of the image")
+            channels = takeInput()
+            progress += isReenter(channels)
+
 
     prev_width = width
     prev_height = height
