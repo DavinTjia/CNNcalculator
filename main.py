@@ -1,8 +1,5 @@
 # take a user input of dimension of the image
 
-import sys
-import os
-
 def takeInput():
     res = input()
     # check if the input is an integer
