@@ -54,6 +54,7 @@ def main():
         print("(C)onvolution or (P)ooling or (R)evert or (T)erminate")
         print("Current dimension: " + str(width) + "x" + str(height) + "x" + str(channels))
         choice = input().upper()
+
         if choice == 'C':
             # ask for input channels size, output channels size, kernel size
             # , stride, and padding
@@ -112,7 +113,6 @@ def main():
             width = output_width
             height = output_height
             channels = output_channels
-
         elif choice == 'P':
             # initialize the kernel size, stride, and padding
             kernel_size, stride, padding = 1, 1, 0
